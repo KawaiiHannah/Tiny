@@ -226,8 +226,8 @@ a {
 
 
 .o-band--large {
-  padding-bottom: 3.75rem;
-  padding-top: 3.75rem; }
+  padding-bottom: 4.6875rem;
+  padding-top: 4.6875rem; }
 
 .c-hero,
 .o-band--feature {
@@ -415,22 +415,25 @@ a {
   [data-layout="feature-halves"] > * {
     width: 50%; } }
 
-@media screen and (min-width: 48rem) {
-  [data-layout="cta-panel"] {
-    flex-direction: row;
-    align-items: center; } }
-
-@media screen and (min-width: 48rem) {
-  [data-layout="cta-panel"] > *:last-child {
-    width: 33.33333%;
-    text-align: right; } }
-
-[data-layout="cta-panel"] > *:first-child h2 {
-  margin-bottom: 0; }
-
-@media screen and (min-width: 48rem) {
+[data-layout="cta-panel"] {
+  text-align: center; }
+  @media screen and (min-width: 48rem) {
+    [data-layout="cta-panel"] {
+      flex-direction: row;
+      align-items: center;
+      text-align: left; } }
+  @media screen and (min-width: 48rem) {
+    [data-layout="cta-panel"] > *:last-child {
+      width: 33.33333%;
+      text-align: right; } }
   [data-layout="cta-panel"] > *:first-child {
-    width: 66.66667%; } }
+    margin-bottom: 0; }
+    [data-layout="cta-panel"] > *:first-child h2 {
+      margin-bottom: 0; }
+    @media screen and (min-width: 48rem) {
+      [data-layout="cta-panel"] > *:first-child {
+        width: 66.66667%;
+        margin-bottom: 40px; } }
 
 /**
  * A larger paragraph for introducing a section of text

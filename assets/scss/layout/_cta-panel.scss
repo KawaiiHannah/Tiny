@@ -1,8 +1,11 @@
 [data-layout="cta-panel"] {
 
+	text-align: center;
+
 	@media screen and (min-width: _breakpoint( medium ) ) {
 		flex-direction: row;
 		align-items: center;
+		text-align: left;
 	}
 
 	> *:last-child {
@@ -14,12 +17,15 @@
 
 	> *:first-child {
 
+		margin-bottom: 0;
+
 		h2 {
 			margin-bottom: 0;
 		}
 
 		@media screen and (min-width: _breakpoint( medium ) ) {
 			width: _columns( 8 );
+			margin-bottom: _gutter( 1 );
 		}
 	}
 
