@@ -1,0 +1,62 @@
+.c-feature {
+	display: block;	
+
+	&:hover .c-feature__icon {
+		top: -.25em;
+	}
+}
+
+	.c-feature__icon {
+		margin-bottom: _spacing-unit( 1 );
+		position: relative;
+		top: 0;
+		transition: all .2s ease;
+	}
+
+	.c-feature__content {
+
+		p {
+			color: _color( light, contrast );
+		}
+
+	}
+
+.c-feature--primary {
+	color: _color( secondary );
+
+	&:visited {
+		color: _color( secondary, dark );
+	}
+
+	&:hover {
+		color: _color( secondary, light );
+	}
+}
+
+
+.c-feature--grid {
+	text-align: center;
+
+	p {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 12em;
+	}
+}
+
+.c-feature--list {
+	position: relative;
+	padding-left: _spacing-unit( 5 ); // Width of icon size
+
+	p {
+		font-size: _calcrem( _typography( primary, size, small ) );
+		color: _color( page, contrast );
+		max-width: _breakpoint( small );
+	}
+
+	.c-feature__icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}

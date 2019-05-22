@@ -1,0 +1,21 @@
+[data-layout="feature-thirds"] {
+
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	> * {
+		flex: 1 0 _columns( 6 );
+
+		&:first-child {
+			flex: 1 0 _columns( 12 );
+
+			@media screen and ( min-width: _breakpoint( medium ) ) {
+				flex: 1 0 _columns( 4 );
+			}
+		}
+
+		@media screen and ( min-width: _breakpoint( medium ) ) {
+			flex: 1 0 _columns( 4 );
+		}
+	}
+}

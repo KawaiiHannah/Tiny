@@ -1,0 +1,32 @@
+$kh-typography--base-unit: 30px !default;
+$kh-typography--base-text-size: 16px !default;
+
+$kh-typeface--primary: (
+	face: avenir,
+	fallback: "helvetica, arial, sans-serif",
+	weight: (
+		regular: 400,
+		semi-bold: 500,
+		bold: 700
+	),
+	size: (
+		tiny: 12px,
+		small: 14px,
+		regular: 16px,
+		large: 24px,
+		huge: 48px,
+		giga: 72px
+	),
+	leading: (
+		tiny: 12px,
+		small: 14px,
+		regular: 16px,
+		large: 30px,
+		huge: 48px,
+		giga: 72px
+	)
+);
+
+$kh-typefaces: (
+	primary: $kh-typeface--primary
+);

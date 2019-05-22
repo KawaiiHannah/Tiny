@@ -1,0 +1,22 @@
+/**
+ * Check if a value is a unitless number for calculation purposes
+ * @param  mixed     $value    The value to check
+ * @return boolean             Returns true if it's a number WITHOUT a 'px', '%' etc unit attached.
+ */
+@function is-unitless-number( $value ) {
+
+	@return ( ( type-of( $value ) == 'number' ) AND ( unit( $value ) == '' ) );
+
+}
+
+
+/**
+ * Check if a value is a number for calculation purposes
+ * @param  mixed $value    The value to check
+ * @return boolean         Returns true if it's a number
+ */
+@function is-number( $value ) {
+
+	@return ( type-of( $value ) == 'number' );
+
+}

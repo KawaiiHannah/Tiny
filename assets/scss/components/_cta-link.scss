@@ -1,0 +1,37 @@
+.c-cta-link {
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: _typography( primary, weight, bold );
+
+	&:after {
+		border-right: 2px solid currentcolor;
+		border-top: 2px solid currentcolor;
+		content: "";
+		display: inline-block;
+		height: .5em;
+		margin-left: .5em;
+		position: relative;
+		top: -( .15em );
+		left: 0;
+		transform: rotate( 45deg );
+		transition: all .2s ease;
+		width: .5em;
+	}
+
+	&:hover:after {
+		left: .25em; // Use position, so it doesn't change the centered physical location
+	}
+
+}
+
+.c-cta-link--primary {
+	color: _color( secondary );
+
+	&:visited {
+		color: _color( secondary, dark );
+	}
+
+	&:hover {
+		color: _color( secondary, light );
+	}
+}

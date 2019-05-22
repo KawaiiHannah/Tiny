@@ -1,0 +1,55 @@
+/**
+ * Website color variables
+ * @type string
+ */
+$kh-color--primary: #1976d2;
+$kh-color--secondary: #3ED0A6;
+$kh-color--light: #F4F9FF;
+$kh-color--grey: #f4f4f4;
+$kh-color--dark: #4A4A4A;
+$kh-color--page: #ffffff;
+
+
+/**
+ * Color map containing our main colors and variants.
+ * Use the "_color( 'primary', 'base' )" function to get colors and shades.
+ * @type map
+ */
+$kh-colors: (
+	primary: (
+		base: $kh-color--primary,
+		light: lighten( $kh-color--primary, 5 ),
+		dark: darken( $kh-color--primary, 5 ),
+		contrast: #ffffff,
+	),
+	secondary: (
+		base: $kh-color--secondary,
+		light: lighten( $kh-color--secondary, 5 ),
+		dark: darken( $kh-color--secondary, 5 ),
+		contrast: #ffffff,
+	),
+	light: (
+		base: $kh-color--light,
+		light: lighten( $kh-color--light, 5 ),
+		dark: darken( $kh-color--light, 5 ),
+		contrast: #3E3E3E,
+	),
+	grey: (
+		base: $kh-color--grey,
+		light: lighten( $kh-color--grey, 5 ),
+		dark: darken( $kh-color--grey, 5 ),
+		contrast: #3E3E3E,
+	),
+	dark: (
+		base: $kh-color--dark,
+		light: lighten( $kh-color--dark, 5 ),
+		dark: darken( $kh-color--dark, 5 ),
+		contrast: #ffffff,
+	),
+	page: (
+		base: $kh-color--page,
+		light: lighten( $kh-color--page, 5 ),
+		dark: darken( $kh-color--page, 5 ),
+		contrast: #8F8E8E,
+	)
+);

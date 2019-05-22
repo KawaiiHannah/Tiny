@@ -1,0 +1,17 @@
+/**
+ * Set up elements for layout purposes
+ */
+[data-layout] {
+
+	display: flex;
+	margin-left: -( _grid( gutter ) );
+	flex-direction: column;
+	margin-bottom: -( _grid( gutter ) );
+
+	> * {
+		width: 100%;
+		padding-left: _grid( gutter );
+		margin-bottom: _grid( gutter );
+	}
+
+}

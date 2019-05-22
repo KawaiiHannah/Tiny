@@ -1,0 +1,12 @@
+[data-layout="feature-halves"] {
+
+	@media screen and ( min-width: _breakpoint( medium ) ) {
+		flex-direction: row;
+	}
+
+	> * {
+		@media screen and ( min-width: _breakpoint( medium ) ) {
+			width: _columns( 6 );
+		}
+	}
+}

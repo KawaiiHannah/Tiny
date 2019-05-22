@@ -1,0 +1,14 @@
+/**
+ * A boxed notification style
+ */
+.c-notify {
+	padding: _spacing-unit( .5 );
+	background-color: _color( light );
+	color: _color( light, contrast );
+	font-size: _typography( primary, size, small );
+	font-weight: _typography( primary, weight, bold );
+
+	svg {
+		fill: _color( primary );
+	}
+}

@@ -1,0 +1,61 @@
+%o-band,
+.o-band {
+	padding-bottom: _spacing-unit( 1 );
+	padding-top: _spacing-unit( 1 );
+}
+
+%o-band--large,
+.o-band--large {
+	padding-bottom: _spacing-unit( 2 );
+	padding-top: _spacing-unit( 2 );
+}
+
+%o-band--feature {
+	background-image: url( '../img/hero.png' );
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-size: cover;
+}
+
+.o-band--light {
+	h2,
+	.h2 {
+		color: _color( light, contrast );
+	}
+}
+
+.o-band--grey-arrow {
+	position: relative;
+
+	&:before {
+		background-color: _color( grey );
+		background-image: url( '../img/bg-grey-arrow.png' );
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		content: "";
+		display: block;
+		
+		position: absolute;
+		width: 100%;
+		left: 0;
+		z-index: -1;
+		height: 140%;
+		top: -40%;
+
+		@media screen and ( min-width: _breakpoint( large ) ) {
+			top: -10%;
+			height: 110%;
+		}
+
+		@media screen and ( min-width: _breakpoint( giga ) ) {
+			height: 120%;
+			top: -20%;
+		}
+	}
+
+	section {
+		position: relative;
+		z-index: 2;
+	}
+}

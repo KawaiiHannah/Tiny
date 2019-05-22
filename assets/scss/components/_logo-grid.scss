@@ -1,0 +1,45 @@
+.c-logo-grid {
+	background-color: _color( page );
+	box-shadow: 2px 2px _spacing-unit( 2 ) rgba( 0, 0, 0, .1 );
+	display: flex;
+	flex-wrap: wrap;
+    align-items: stretch;
+    display: flex;
+
+	img {
+		filter: grayscale( 100% );
+		transition: all .2s ease;
+		transform: scale( 1 );
+
+		&:hover {
+			filter: grayscale( 0% );
+			transform: scale( 1.05 );
+		}
+	}
+
+	a {
+		display: inline-block;
+		padding: _spacing-unit( .5 ) _spacing-unit( 1 );
+	}
+
+	> * {
+		flex: 1 0 _columns( 6 );
+		border-right: 1px solid rgba( _color( page, contrast ), .2 );
+		border-bottom: 1px solid rgba( _color( page, contrast ), .2 );
+		align-items: center;
+		justify-content: center;
+	    display: flex;
+
+	    @media screen and ( min-width: _breakpoint( small ) ) {
+			flex: 1 0 _columns( 4 );
+		}
+
+	    @media screen and ( min-width: _breakpoint( medium ) ) {
+			flex: 1 0 _columns( 3 );
+		}
+
+		@media screen and ( min-width: _breakpoint( large ) ) {
+			flex: 1 0 _columns( 2 );
+		}
+	}
+}

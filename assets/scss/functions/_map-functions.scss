@@ -1,0 +1,82 @@
+/**
+ * Retrieve a colour from the kh-color map
+ * @param  string $color The color category
+ * @param  string $shade: base          The variant of the color
+ * @return string         The hex code of the colour variant requested. Returns an error if it doesn't exist.
+ */
+@function _color( $color, $shade: base ) {
+
+	@return _getmapoption( $kh-colors, $color, $shade );
+
+}
+
+
+/**
+ * Retrieve a typeface from the kh-typefaces map
+ * @param  string $typeface The typeface category
+ * @return string         The CSS name of the typeface
+ */
+@function _typeface( $typeface ) {
+
+	@return _getmapoption( $kh-typefaces, $typeface, 'face' );
+
+}
+
+
+/**
+ * Retrieve typeface information from the kh-typefaces map
+ * @param  string $typeface The typeface category
+ * @param  string $choices... Strings of the typography keys to look for
+ * @return string         The string containing the value of the key
+ */
+@function _typography( $typeface, $choices... ) {
+
+	@return _getmapoption( map-get( $kh-typefaces, $typeface ), $choices... );
+
+}
+
+
+/**
+ * Retrieve breakpoint information from the kh-breakpoints map
+ * @param  string $size The size of the major breakpoint
+ * @return string         The string containing the value of the key
+ */
+@function _breakpoint( $size ) {
+
+	@return _calcrem( _getmapoption( $kh-breakpoints, $size ) );
+
+}
+
+
+/**
+ * Retrieve grid information from the kh-grid map
+ * @param  string $key The key of the value wanted
+ * @return string         The string containing the value of the key
+ */
+@function _grid( $key ) {
+
+	@return _getmapoption( $kh-grid, $key );
+
+}
+
+
+/**
+ * Get an option from a map, works several layers deep
+ * @param  map $map        Map to search through
+ * @param  string $options... Strings of the keys to search for.
+ * @return map             Return the map if it's a valid key
+ */
+@function _getmapoption( $map, $options... ) {
+
+	@each $option in $options {
+		@if ( map-has-key( $map, $option ) ) {
+			$map: map-get( $map, $option );
+		}
+		@else {
+			@warn "#{ $option } is not a valid key of #{ $map }";
+			@return false;
+		}
+	}
+	@return $map;
+
+}

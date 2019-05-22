@@ -1,0 +1,37 @@
+/**
+ * Use a consistent spacing unit size across elements. Uses the typography base line height by default.
+ * @param  float $multiplier               How many units to multiply. Can be in points (.5 etc)
+ * @param  string $kh-typography--base-unit Pixel value for the base unit size
+ * @return string                           Pixel value for the calculated unit size
+ */
+@function _spacing-unit( $multiplier, $unit: $kh-typography--base-unit ) {
+
+	@if ( is-unitless-number( $multiplier ) ) {
+		@return _calcrem( $unit * $multiplier );
+	} @elseif ( is-number( $multiplier ) ) {
+		@warn "The multiplier `#{ $multiplier }` supplied to _spacing-unit isn't a unitless number.";
+		@return false;
+	} @else {
+		@warn "The multiplier `#{ $multiplier }` supplied to _spacing-unit isn't a number.";
+		@return false;
+	}
+
+}
+
+
+/**
+ * Calculate the rem size from our base spacing unit size
+ * @param  {[type]} $pixelvalue The desired pixel size
+ * @param  {[type]} $base:      $kh-typography--base-unit Base line height size throughout the project
+ * @return string             Calculated rem size
+ */
+@function _calcrem( $pixelvalue, $base: $kh-typography--base-text-size ) {
+
+	@if ( is-number( $pixelvalue ) ) {
+		@return ( $pixelvalue / $base ) * 1rem;
+	} @else {
+		@warn "The value `#{ $pixelvalue }` supplied to _calcrem isn't a number.";
+		@return false;
+	}
+
+}

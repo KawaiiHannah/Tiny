@@ -1,0 +1,17 @@
+/**
+ * Define the global major breakpoints for layout use
+ */
+
+$kh-breakpoint--small: 480px;
+$kh-breakpoint--medium: 768px;
+$kh-breakpoint--large: 1020px;
+$kh-breakpoint--huge: 1280px;
+$kh-breakpoint--giga: 1400px;
+
+$kh-breakpoints: (
+	small: $kh-breakpoint--small,
+	medium: $kh-breakpoint--medium,
+	large: $kh-breakpoint--large,
+	huge: $kh-breakpoint--huge,
+	giga: $kh-breakpoint--giga,
+);

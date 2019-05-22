@@ -1,0 +1,23 @@
+/**
+ * A larger paragraph for introducing a section of text
+ */
+
+$typeface: primary;
+$text-size: large;
+
+.c-lede,
+%c-lede {
+	font-size: _calcrem( _typography( $typeface, size, $text-size ) );
+	line-height: _calcrem( _typography( $typeface, leading, $text-size ) );
+	font-weight: _typography( $typeface, weight, regular );
+}
+
+
+.c-lede--short {
+	max-width: 25em;
+
+	.u-text--center & {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

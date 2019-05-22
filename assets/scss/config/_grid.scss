@@ -1,0 +1,11 @@
+/**
+ * Basic grid vars
+ */
+
+$kh-grid--columns: 12;
+$kh-grid--gutter: 40px;
+
+$kh-grid: (
+	gutter: $kh-grid--gutter,
+	columns: $kh-grid--columns
+);

@@ -1,0 +1,23 @@
+/**
+ * Basic grid functions
+ */
+
+/**
+ * Get the gutter space between columns
+ * @param  number $size Multiplier of column space, defaults to 1
+ * @return string       The pixel size of the calculated gutter
+ */
+@function _gutter( $size: 1 ) {
+	@return ( _grid( gutter ) * $size );
+}
+
+
+/**
+ * Set the width in % based on the grid
+ * @param  number $span Unitless number denoting how many columns to span
+ * @param  number $total: $kh-grid--columns The number of columns within the grid. Defaults to the global grid number.
+ * @return string         Percentage width of the column
+ */
+@function _columns( $span, $total: $kh-grid--columns ) {
+	@return ( ( 100% / $total ) * $span );
+}

@@ -1,0 +1,16 @@
+/**
+ * Base link styles
+ */
+
+a {
+	color: _color( primary );
+
+	&:visited {
+		color: _color( primary, dark );
+	}
+
+	&:hover {
+		color: _color( primary, light );
+	}
+	
+}

@@ -1,0 +1,46 @@
+.c-btn-feature {
+	background-color: rgba( 255, 255, 255, .1 );
+	border-radius: 1em;
+	display: block;
+	font-size: _typography( primary, size, small );
+	padding: _spacing-unit( .5 ) _spacing-unit( .75 );
+	position: relative;
+	text-align: left;
+	transition: all .2s ease;
+
+	@media screen and ( min-width: _breakpoint( large ) ) {
+		border-radius: 20em;
+		padding: _spacing-unit( 1 ) _spacing-unit( 1 );
+	}
+
+	&:hover {
+		background-color: rgba( 255, 255, 255, .15 );
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+	.c-btn-feature__icon {
+		height: _spacing-unit( 2 );
+		left: _spacing-unit( .75 ); // size of left padding
+		position: absolute;
+		top: _spacing-unit( .5 ); // size of top padding
+		width: _spacing-unit( 2 );
+
+		@media screen and ( min-width: _breakpoint( large ) ) {
+			left: _spacing-unit( 1 ); // size of left padding
+			top: _spacing-unit( 1 ); // size of top padding
+		}
+	}
+
+	.c-btn-feature__content {
+		padding-left: _spacing-unit( 2 ); // Size of icon + padding
+	}
+
+	.c-btn-feature__heading {
+		font-size: _typography( primary, size, small );
+		font-weight: _typography( primary, weight, bold );
+		margin-bottom: 0;
+	}

@@ -1,0 +1,7 @@
+.o-contain {
+	max-width: #{ ( _breakpoint( large ) + _calcrem( _gutter( 1 ) ) ) };
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: _gutter( .5 );
+	padding-right: _gutter( .5 );
+}

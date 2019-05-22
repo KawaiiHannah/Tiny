@@ -1,0 +1,26 @@
+.o-avatar {
+	background-color: _color( light );
+	border-radius: 50%;
+	display: inline-block;
+	height: _spacing-unit( 4 );
+	position: relative;
+	width: _spacing-unit( 4 );
+	overflow: hidden;
+
+	.o-band--grey-arrow & {
+		background-color: _color( page );
+	}
+
+	.o-icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate( -50%, -50% );
+	}
+
+}
+
+.o-avatar--small {
+	width: _spacing-unit( 2 );
+	height: _spacing-unit( 2 );
+}
