@@ -1,0 +1,24 @@
+.c-btn {
+	background-color: _color( secondary );
+	color: _color( secondary, contrast );
+	display: inline-block;
+	text-decoration: none;
+	padding: _spacing-unit( .5 ) _spacing-unit( 1 );
+	border-radius: _spacing-unit( .125 );
+	text-transform: uppercase;
+	font-weight: _typography( primary, weight, bold );
+
+	&:hover,
+	&:visited {
+		color: _color( secondary, contrast );
+	}
+
+	&:hover {
+		background-color: _color( secondary, light );
+	}
+}
+
+
+.c-btn--large {
+	padding: _spacing-unit( .75 ) _spacing-unit( 1.5 );
+}

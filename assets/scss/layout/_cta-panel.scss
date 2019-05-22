@@ -1,0 +1,26 @@
+[data-layout="cta-panel"] {
+
+	@media screen and (min-width: _breakpoint( medium ) ) {
+		flex-direction: row;
+		align-items: center;
+	}
+
+	> *:last-child {
+		@media screen and (min-width: _breakpoint( medium ) ) {
+			width: _columns( 4 );
+			text-align: right;
+		}
+	}
+
+	> *:first-child {
+
+		h2 {
+			margin-bottom: 0;
+		}
+
+		@media screen and (min-width: _breakpoint( medium ) ) {
+			width: _columns( 8 );
+		}
+	}
+
+}

@@ -257,11 +257,14 @@ a {
   padding-bottom: 3.75rem;
   padding-top: 3.75rem; }
 
-.c-hero {
+.c-hero,
+.o-band--feature {
+  background-color: #1976d2;
   background-image: url("../img/hero.png");
-  background-repeat: no-repeat;
   background-position: bottom right;
-  background-size: cover; }
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff; }
 
 .o-band--light h2,
 .o-band--light .h2 {
@@ -440,6 +443,23 @@ a {
   [data-layout="feature-halves"] > * {
     width: 50%; } }
 
+@media screen and (min-width: 48rem) {
+  [data-layout="cta-panel"] {
+    flex-direction: row;
+    align-items: center; } }
+
+@media screen and (min-width: 48rem) {
+  [data-layout="cta-panel"] > *:last-child {
+    width: 33.33333%;
+    text-align: right; } }
+
+[data-layout="cta-panel"] > *:first-child h2 {
+  margin-bottom: 0; }
+
+@media screen and (min-width: 48rem) {
+  [data-layout="cta-panel"] > *:first-child {
+    width: 66.66667%; } }
+
 /**
  * A larger paragraph for introducing a section of text
  */
@@ -468,8 +488,6 @@ a {
     fill: #1976d2; }
 
 .c-hero {
-  background-color: #1976d2;
-  color: #ffffff;
   padding: 7.5rem 1.875rem 3.75rem 1.875rem;
   text-align: center; }
 
@@ -686,6 +704,23 @@ a {
     .c-quote cite strong {
       display: block;
       margin-bottom: 0.46875rem; }
+
+.c-btn {
+  background-color: #3ED0A6;
+  color: #ffffff;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.9375rem 1.875rem;
+  border-radius: 0.23438rem;
+  text-transform: uppercase;
+  font-weight: 700; }
+  .c-btn:hover, .c-btn:visited {
+    color: #ffffff; }
+  .c-btn:hover {
+    background-color: #53d5af; }
+
+.c-btn--large {
+  padding: 1.40625rem 2.8125rem; }
 
 .u-push--top {
   margin-top: 3.75rem; }

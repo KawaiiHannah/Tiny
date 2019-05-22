@@ -10,11 +10,14 @@
 	padding-top: _spacing-unit( 2 );
 }
 
-%o-band--feature {
+%o-band--feature,
+.o-band--feature {
+	background-color: _color( primary );
 	background-image: url( '../img/hero.png' );
-	background-repeat: no-repeat;
 	background-position: bottom right;
+	background-repeat: no-repeat;
 	background-size: cover;
+	color: _color( primary, contrast );
 }
 
 .o-band--light {

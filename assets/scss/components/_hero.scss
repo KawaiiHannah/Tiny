@@ -1,8 +1,6 @@
 .c-hero {
 	@extend %o-band--feature;
-
-	background-color: _color( primary );
-	color: _color( primary, contrast );
+	
 	padding: _spacing-unit( 4 ) _spacing-unit( 1 ) _spacing-unit( 2 ) _spacing-unit( 1 );
 	text-align: center;
 }
